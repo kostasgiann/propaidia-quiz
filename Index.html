@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="el">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Μαθαίνω την Προπαίδεια!</title>
+
+	<!-- Εξωτερική γραμματοσειρά και favicon -->
+	<link href="https://fonts.googleapis.com/css2?family=Mynerve&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" href="Favicon.ico">
+
+	<!-- Σύνδεση με CSS -->
+	<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+
+	<h1 class="colorful-title">
+	  <div class="images">
+		<img src="math.png"/>
+		<img src="computer.png"/>
+		<img src="math-book.png"/>
+	  </div>
+			  <span>🎉</span><span> </span><span> </span>
+			  <span>Μ</span><span>α</span><span>θ</span><span>α</span><span>ί</span><span>ν</span><span>ω</span>
+			  <span> </span> <span> </span>
+			  <span>τ</span><span>η</span><span>ν</span>
+			  <span> </span> <span> </span>
+			  <span>Π</span><span>ρ</span><span>ο</span><span>π</span><span>α</span><span>ί</span><span>δ</span><span>ε</span><span>ι</span><span>α</span>
+			  <span>!</span><span> </span><span> </span>
+			  <span>🎉</span>
+	  <div class="images">
+		<img src="abacus.png" alt="abacus"/>
+		<img src="backpack.png" alt="backpack"/>
+	   <img src="geometry.png" alt="geometry"/>
+	  </div>
+	</h1>
+
+
+	<div id="difficultyLabel">
+		Επίλεξε επίπεδο δυσκολίας:
+		<select id="levelSelect">
+			<option value="easy">Εύκολο</option>
+			<option value="medium" selected>Μέτριο</option>
+			<option value="hard">Δύσκολο</option>
+			<option value="all">Όλα</option>
+		</select>
+		
+		
+		 Επίλεξε αριθμό ερωτήσεων:
+		<select id="questionCountSelect">
+			<option value="5">5 Ερωτήσεις</option>
+			<option value="10" selected>10 Ερωτήσεις</option>
+			<option value="20">20 Ερωτήσεις</option>
+		</select>
+	</div>
+	<button id="startQuiz">🚀 Ξεκίνα Quiz</button>
+
+	<div id="quizArea" style="display:none;">
+		<p id="quizQuestion"></p>
+		<input type="number" id="quizAnswer" placeholder="Απάντηση">
+		<button id="submitAnswer">✅ Έλεγξε</button>
+		<button id="showHint">💡 Βοήθεια</button>
+		<p id="result"></p>
+		<p id="advice"></p>
+		<div id="progressBarContainer"><div id="progressBar"></div></div>
+	</div>
+
+	<table id="multiplicationTable"></table>
+
+	<audio id="correctSound" src="Corect.mp3" preload="auto"></audio>
+	<audio id="wrongSound" src="error.mp3" preload="auto"></></audio>
+
+	<div id="buttonsContainer">
+		<button id="printTable">🖨️ Εκτύπωση Πίνακα</button>
+		<button id="openDetailedTables">📖 Προπαίδεια Αναλυτικά</button>
+		<button id="showInstructions">📝 Οδηγίες Χρήσης</button>
+		<button id="downloadPoster">🖼️ Κατέβασε την αφίσα !!</button>
+	</div>
+
+	<!-- Βιβλιοθήκη για confetti -->
+	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+	<!-- Σύνδεση με JS -->
+	<script src="script.js"></script>
+	</body>
+</html>
